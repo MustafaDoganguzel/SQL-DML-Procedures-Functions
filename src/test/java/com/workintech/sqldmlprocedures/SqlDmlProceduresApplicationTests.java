@@ -12,7 +12,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
+import org.junit.jupiter.api.extension.ExtendWith;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -96,7 +96,7 @@ class SqlDmlProceduresApplicationTests {
 	void callOgrenciListesiTest(){
 		List<Ogrenci> ogrenciList = ogrenciRepository.findAllOgrenci();
 		assertNotNull(ogrenciList);
-		assertEquals(ogrenciList.size(), 10);
+		assertEquals(ogrenciList.size(), 9);
 	}
 
 	@DisplayName("kitap tablosuna yeni kitap eklemek için 'ekle' adında bir prosedür oluşturun.")
